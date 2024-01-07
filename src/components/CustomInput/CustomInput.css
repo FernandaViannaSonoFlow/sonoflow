@@ -1,0 +1,55 @@
+#main-custominput {
+    /* width: 300px; */
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 50px;
+    border: 1px solid white;
+    border-radius: 15px;
+
+}
+
+.input-custominput {
+    width: 90%;
+    height: 100%;
+
+}
+
+.label-custominput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    left: 14px;
+    color: grey;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    background-color: var(--background--color);
+
+}
+
+#main-custominput :is(input:focus, input:valid)~.label-custominput {
+    transform: translateY(-70%) translateX(10px) scale(.7);
+    padding: 0px 10px;
+    color: var(--white);
+}
+
+.icon-custominput{
+    width: 30px;
+    height: 30px;
+}
+
+.eyes-custominput{
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+}
+
+@keyframes shake{
+    25%{ transform: translateX(4px);}
+    50%{ transform: translateX(-4px);}
+    75%{ transform: translateX(4px);}
+}

@@ -1,0 +1,17 @@
+#main-CustomButton{
+    border-radius: 15px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+    background-color: #c9a96b;
+}
+
+#main-CustomButton h1{
+    max-width: 250px;
+    font-size: 20px;
+    text-align: center;
+    color: #1c2d39;
+}

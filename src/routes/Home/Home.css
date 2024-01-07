@@ -1,0 +1,163 @@
+/* -- LAYER 1 -- */
+#main-Home {
+    width: 360px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -- LAYER 5 -- */
+#main-Home-1 {
+    width: 360px;
+    height: 100vh;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    /* background-color: grey; */
+}
+
+
+
+/* -- Caixa do Input Model (1) -- */
+#section{
+    width: 300px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#section span{
+    display: flex;
+    gap: 10px;
+}
+
+#section span:nth-child(2){
+    justify-content: space-between;
+}
+
+#section span a{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+}
+
+#section span a::before{
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: max-content;
+    font-size: 12px;
+    max-width: 250px;
+    margin-top: 8px;
+    padding: 6px;
+    color: white;
+    border-radius: 4px;
+    opacity: 0;
+    display: none;
+    background-color: black;
+}
+
+#section span a:hover::before{
+    opacity: 1;
+    display: inline;
+}
+
+#section span a img{
+    width: 20px;
+}
+
+#section .title-input{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#section label{
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+}
+/*  -- ======================= --  */
+
+#main-Home-1 h1{
+    font-size: 20px;
+}
+
+#main-Home-1 p{
+    font-size: 15px;
+}
+
+
+
+.input-1{
+    width: 200px;
+    height: 50px;
+    padding-left: 10px;
+    background-color: #80808068;
+    border-bottom: 1px solid white;
+}
+
+.input-1::placeholder{
+    color: #ffffff64;
+}
+.input-1 option{
+    background-color: #808080;
+}
+
+.span-cansado-descansado{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.input-cansado-descansado{
+    width: 100%;
+}
+
+
+.sonoflow-icon-layer-1 {
+    width: 70%;
+    margin: 20px 0px 200px 0px;
+    top: 0;
+    position: absolute;
+}
+
+/* -- LAYER 2 -- */
+.img-layer-2 {
+    width: 40%;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+
+/* -- LAYER 3 -- */
+.img-layer-3 {
+    width: 40%;
+    bottom: 0;
+    position: absolute;
+}
+
+
+/* -- area-continue -- */
+.area-continue {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    /* background-color: green; */
+}
+
+/* -- Aviso -- */
+.aviso {
+    position: absolute;
+    bottom: 20px;
+}

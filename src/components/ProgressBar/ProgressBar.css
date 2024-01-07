@@ -1,0 +1,26 @@
+#main-ProgressBar {
+    width: 60%;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    position: absolute;
+    
+    top: 50px;
+    
+}
+.progress{
+    width: 100px;
+    height: 100%;
+    margin-right: -7.5px;
+    border-radius: 10px 0px 0px 10px;
+    transition: all 1s ease;
+    background-color: #00af8e;
+}
+.circle-ProgressBar{
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: #00af8e;
+    box-shadow: 0 0 10px black;
+}

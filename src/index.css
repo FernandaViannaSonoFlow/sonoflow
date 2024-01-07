@@ -1,0 +1,25 @@
+*{margin: 0; padding: 0;}
+:root{
+  font-family: 'Clear Sans', sans-serif;
+  --background--color: #1c2d39;
+  color: #ffffff;
+}
+
+input, select{
+  color: white;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+}
+input:focus {
+  outline: none;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background--color);
+  
+}
