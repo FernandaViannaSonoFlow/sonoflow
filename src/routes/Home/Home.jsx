@@ -11,7 +11,7 @@ import { InputModel_1, InputModel_2, InputModel_3, InputModel_4 } from '../../co
 
 
 export default function Home() {
-    const [layer, setLayer] = useState(5)
+    const [layer, setLayer] = useState(1)
     const [progress, setProgress] = useState('100%')
     const [sliderValue, setSliderValue] = useState(50)
     const [nane_1] = useState(nane1)
