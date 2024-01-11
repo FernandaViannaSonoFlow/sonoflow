@@ -11,7 +11,7 @@ import { InputModel_1, InputModel_2, InputModel_3, InputModel_4 } from '../../co
 
 
 export default function Home() {
-    const [layer, setLayer] = useState(1)
+    const [layer, setLayer] = useState(5)
     const [progress, setProgress] = useState('100%')
     const [sliderValue, setSliderValue] = useState(50)
     const [nane_1] = useState(nane1)
@@ -24,25 +24,25 @@ export default function Home() {
     const [pergunta_0, setPergunta_0] = useState('')
     const [pergunta_1, setPergunta_1] = useState('')
     const [pergunta_2, setPergunta_2] = useState('')
-    const [pergunta_3, setPergunta_3] = useState('')
-    const [pergunta_4, setPergunta_4] = useState('')
-    const [pergunta_5, setPergunta_5] = useState('')
+    const [pergunta_3, setPergunta_3] = useState('Menos de 5 minutos')
+    const [pergunta_4, setPergunta_4] = useState('0')
+    const [pergunta_5, setPergunta_5] = useState('Menos de 5 minutos')
     const [pergunta_6, setPergunta_6] = useState('')
     const [pergunta_7, setPergunta_7] = useState('')
-    const [pergunta_8, setPergunta_8] = useState('')
+    const [pergunta_8, setPergunta_8] = useState('50')
     const [pergunta_9, setPergunta_9] = useState([])
     const [pergunta_10, setPergunta_10] = useState([])
     const [pergunta_11, setPergunta_11] = useState([])
     const [pergunta_12, setPergunta_12] = useState('')
-    const [pergunta_13, setPergunta_13] = useState('')
+    const [pergunta_13, setPergunta_13] = useState('50')
 
     useEffect(() => {
-        if (pergunta_0 && pergunta_1 && pergunta_2 && pergunta_3 && pergunta_4 && pergunta_5 && pergunta_6 && pergunta_7 && pergunta_8 && pergunta_9 && pergunta_10 && pergunta_11 !== '' && pergunta_12 && pergunta_13) {
+        if (pergunta_0 && pergunta_1 && pergunta_2 && pergunta_3 && pergunta_4 && pergunta_5 && pergunta_6 && pergunta_7 && pergunta_8 && pergunta_9 && pergunta_10 && pergunta_11 !== '' && pergunta_13) {
             setButtonTrue(true)
         } else {
             setButtonTrue(false)
         }
-    }, [pergunta_0, pergunta_1, pergunta_2, pergunta_3, pergunta_4, pergunta_5, pergunta_6, pergunta_7, pergunta_8, pergunta_9, pergunta_10, pergunta_11, pergunta_12, pergunta_13])
+    }, [pergunta_0, pergunta_1, pergunta_2, pergunta_3, pergunta_4, pergunta_5, pergunta_6, pergunta_7, pergunta_8, pergunta_9, pergunta_10, pergunta_11, pergunta_13])
 
 
     // -- Inputs para as perguntas --
@@ -300,6 +300,7 @@ export default function Home() {
                     <main id="main-Home">
                         <img src={sonoflow_icon} alt="" className='sonoflow-icon-layer-1' />
                         <CustomButton text='Comece agora' onClick={() => continueButton()} />
+                        {area()}
                     </main>
 
                 </> :
@@ -316,7 +317,7 @@ export default function Home() {
                     layer === 3 ?
                         <>
                             <main id="main-Home">
-                                <CustomButton text='Sou a inteligência artificial do Sonoflow. Minha missão é te ajudar a ter um sono revigorante.' />
+                                <CustomButton text='Sou a inteligência artificial do Sonoflow. Minha missão é te ajudar a ter um sono revigorante.' position='absolute' top='200px' />
                                 <img src={nane_2} alt="" className='img-layer-3' />
                                 <p className='aviso'>Clique em qualquer lugar para continuar</p>
                                 {area()}
@@ -356,6 +357,7 @@ export default function Home() {
                                     <InputModel_1
                                         title='🛏️ A que horas você foi para a cama?'
                                         info='Coloque o horário que você foi para cama, mesmo se for para ler, usar celular, assistir TV, comer ou qualquer outra atividade na cama.'
+                                        type='time'
                                         onChange={InputPergunta_1}
                                         value={pergunta_1}
                                     />
@@ -363,6 +365,7 @@ export default function Home() {
                                     <InputModel_1
                                         title='💤 Depois de ir para a cama, qual foi o horário que você decidiu tentar dormir?'
                                         info='Esse horário pode ser diferente do anterior se você vai para cama e fica fazendo outras atividades que não seja dormir. Por exemplo, assistir TV'
+                                        type='time'
                                         onChange={InputPergunta_2}
                                         value={pergunta_2}
                                     />
@@ -393,12 +396,14 @@ export default function Home() {
 
                                     <InputModel_1
                                         title='🛏️ A que horas você acordou pela última vez (e não  voltou a dormir depois)?'
+                                        type='time'
                                         onChange={InputPergunta_6}
                                         value={pergunta_6}
                                     />
 
                                     <InputModel_1
                                         title='🛏️ A que horas você levantou da cama?'
+                                        type='time'
                                         onChange={InputPergunta_7}
                                         value={pergunta_7}
                                     />
