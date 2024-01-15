@@ -193,16 +193,17 @@ export default function Home() {
         { id: 3, text: '💤 Técnica Emi-sleep-3', isChecked: false },
         { id: 4, text: '💤 Técnica Emi-ton', isChecked: false },
         { id: 5, text: '💤 Técnica Emi-ansi', isChecked: false },
-        { id: 6, text: '💻 Eletrônicos (TV, computador, celular)', isChecked: false },
-        { id: 7, text: '💡 Luzes Brancas', isChecked: false },
-        { id: 8, text: '🍺 Álcool', isChecked: false },
-        { id: 9, text: '☕ Cafeína', isChecked: false },
-        { id: 10, text: '😴 Cochilo (qualquer horário)', isChecked: false },
-        { id: 11, text: '🚬 Nicotina', isChecked: false },
-        { id: 12, text: '🍔 Refeição pesada', isChecked: false },
-        { id: 13, text: '🏋️ Exercício (qualquer horário)', isChecked: false },
-        { id: 14, text: '💧 Beber água (2L ou mais)', isChecked: false },
-        { id: 15, text: '☀️ Expôr ao Sol (30min ou mais)', isChecked: false },
+        { id: 6, text: '💤 Outros Protocolos', isChecked: false },
+        { id: 7, text: '💻 Eletrônicos (TV, computador, celular)', isChecked: false },
+        { id: 8, text: '💡 Luzes Brancas', isChecked: false },
+        { id: 9, text: '🍺 Álcool', isChecked: false },
+        { id: 10, text: '☕ Cafeína', isChecked: false },
+        { id: 11, text: '😴 Cochilo (qualquer horário)', isChecked: false },
+        { id: 12, text: '🚬 Nicotina', isChecked: false },
+        { id: 13, text: '🍔 Refeição pesada', isChecked: false },
+        { id: 14, text: '🏋️ Exercício (qualquer horário)', isChecked: false },
+        { id: 15, text: '💧 Beber água (2L ou mais)', isChecked: false },
+        { id: 16, text: '☀️ Expôr ao Sol (30min ou mais)', isChecked: false },
     ]
     const sleepFactorsTopics = [
         { id: 1, text: '🚽 Acordou para ir ao banheiro' },
@@ -450,9 +451,8 @@ export default function Home() {
                                         p2='🟢 Muita'
                                         onChange={InputPergunta_13}
                                         value={pergunta_13} />
-                                    <CustomButton text='Enviar resposta' margin show={buttonTrue} onClick={EnviarResposta} />
-
-
+                                    <CustomButton text='Enviar resposta' margin show={buttonTrue} onClick={EnviarResposta} position={'static'} bottom={'20px'}/>
+                                    <span className='teste'></span>
                                 </main>
                             </>}
             {/* <h1 style={{ position: 'fixed', top: 0 }}>{layer}</h1> */}

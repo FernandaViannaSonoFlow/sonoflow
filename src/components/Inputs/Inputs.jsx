@@ -76,6 +76,7 @@ export function InputModel_4({ title = 'Texto', info = '', lista = [], onChange,
                 {lista.map((item, index) => (
                     <label key={index}>
                         <input
+                        style={{width: 25}}
                             type="checkbox"
                             value={item.id}
                             onChange={() => onChange(item.id, item.text)}
